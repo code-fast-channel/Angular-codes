@@ -1,0 +1,11 @@
+<h3>
+Single Input Field
+</h3>
+<label for="name">Name: </label>
+<input id="name" type="text" [formControl]="name">
+<p style="color:red" *ngIf="name.errors?.required && submitted">name is required</p>
+<br>
+<br>
+<button (click)="submit()">Submit</button>
+<button (click)="updateName()">Update Name</button>
+
