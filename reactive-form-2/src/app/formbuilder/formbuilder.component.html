@@ -1,0 +1,11 @@
+<form [formGroup]='formName' >
+<input formControlName='inputName'>
+<div *ngIf="formName.get('inputName').errors && submitted">
+<span *ngIf ="formName.get('inputName').errors['required']">This field is required</span>
+</div>
+</form>
+<button (click)="submit()">Submit</button>                      
+<p> value: {{ formName.value.inputName }}</p>
+<p> valid: {{ formName.valid }}</p>
+<p> invalid: {{ formName.invalid }}</p>
+<p> value: {{ formName.value|json }}</p>
