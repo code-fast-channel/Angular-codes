@@ -1,0 +1,7 @@
+<label>First Namessss</label><br>
+<input type="text" [formControl]="name" [ngClass]="{ 'is-invalid': submitted && name.errors }" />
+<div *ngIf="submitted && name.errors" class="friend">
+   <div *ngIf="name.errors.required">First Name is required</div>
+   <div *ngIf="name.errors.minlength">name must be at least 6 characters</div>
+</div>   
+<button (click)="submit()">submit</button>
